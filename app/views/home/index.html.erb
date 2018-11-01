@@ -1,4 +1,14 @@
-<%= @prices["DISPLAY"] %>
+<% @prices["DISPLAY"] %>
+
+<% @prices["DISPLAY"].each do |key, value| %>
+  <%= key %> - <%= value["USD"]["PRICE"] %><br/>
+  24h Hight: <%= value["USD"]["HIGHDAY"] %><br/>
+  24h Low:  <%= value["USD"]["LOWDAY"] %><br/>
+  MarketCap: <%= value["USD"]["MKTCAP"] %><br/>
+  <br/>
+  
+<% end %>
+
 <br/><br/>
 
 <div class="container">

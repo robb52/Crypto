@@ -9,7 +9,7 @@ class HomeController < ApplicationController
     @response = Net::HTTP.get(@uri)
     @news = JSON.parse(@response)
 
-    @prices_url = 'https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC&tsyms=USD'
+    @prices_url = 'https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC,ETH,XRP,BCH,EOS,LTC,ADA,XLM,MIOTA,USDT,TRX&tsyms=USD'
     @prices_uri = URI(@prices_url)
     @prices_response = Net::HTTP.get(@prices_uri)
     @prices = JSON.parse(@prices_response)
