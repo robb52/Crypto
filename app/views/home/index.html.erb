@@ -2,5 +2,12 @@
 
 <br/><br/>
 
-<%= @news %>
+<% @news["Data"] %>
+
+<% for x in  @news["Data"] %>
+  <img src="<%= x["imageurl"] %>"><br/>
+  <strong><%= x["title"] %></strong>><br/>
+  <%= x["body"] %><br/><hr><br/>
+  <a href="<%= x["url"] %>">Read More...</a><br/><hr><br/>
+<% end %>
 
