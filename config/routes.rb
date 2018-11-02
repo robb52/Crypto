@@ -4,4 +4,6 @@ Rails.application.routes.draw do
 
   get 'home/prices'
   
+  post "/home/prices" => 'home/prices'
+  
 end
