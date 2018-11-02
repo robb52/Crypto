@@ -1,13 +1,17 @@
 <% if @symbol %>
+  <% if @quote["Response"] %>
+    <h4>That Symbol <%= @symbol %> doesn't exist, please try another....</h4>
 
-  <% @quote["DISPLAY"].each do |key, value| %>
-    <div class="jumbotron">
-      <h1 class="display-4"><%= key %> </h1>
-      Price: <%= value["USD"]["PRICE"] %><br/>
-      24hr High: <%= value["USD"]["HIGHDAY"] %><br/>
-      24hr Low: <%= value["USD"]["LOWDAY"] %><br/>
-      Market Cap: <%= value["USD"]["MKTCAP"] %><br/>
-    </div>
+  <% else %>
+    <% @quote["DISPLAY"].each do |key, value| %>
+      <div class="jumbotron">
+        <h1 class="display-4"><%= key %> </h1>
+        Price: <%= value["USD"]["PRICE"] %><br/>
+        24hr High: <%= value["USD"]["HIGHDAY"] %><br/>
+        24hr Low: <%= value["USD"]["LOWDAY"] %><br/>
+        Market Cap: <%= value["USD"]["MKTCAP"] %><br/>
+      </div>
+    <% end %>
   <% end %>
 
 <% else %>

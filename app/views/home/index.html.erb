@@ -12,13 +12,13 @@
 
     <% @prices["DISPLAY"].each do |key, value| %>
    
-    <tr>
-      <td><%= key %></td>
-      <td><%= value["USD"]["PRICE"] %></td>
-      <td><%= value["USD"]["HIGHDAY"] %></td>
-      <td><%= value["USD"]["LOWDAY"] %></td>
-      <td><%= value["USD"]["MKTCAP"] %></td>
-    </tr>
+      <tr>
+        <td><%= key %></td>
+        <td><%= value["USD"]["PRICE"] %></td>
+        <td><%= value["USD"]["HIGHDAY"] %></td>
+        <td><%= value["USD"]["LOWDAY"] %></td>
+        <td><%= value["USD"]["MKTCAP"] %></td>
+      </tr>
     <% end %>
   </tbody>
 </table>
